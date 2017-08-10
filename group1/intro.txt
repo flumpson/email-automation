@@ -1,0 +1,9 @@
+Hello NAME,
+
+My name is Ryan and I’m a recent graduate from Colby College, a D3 liberal arts school in Maine. At Colby until recently our athletic trainers pieced together fitness programs using Microsoft word and tracked players progress in excel, manually entering in athletes data. I’m part of a team that created software to help our athletic trainers easily create and assign workouts and track the progress of their athletes. They’ve been thrilled so far, it’s saved them multiple hours a week and and has allowed them to ignore the logistics of training hundreds of athletes. I’m reaching out to see whether COLLEGE has a similar solution, and if not, whether you’d be interested in trying ours. I'll include the link to our outreach page below!
+
+Best,
+Ryan Brandt
+Colby 2016
+
+http://omnicoach.fit/
