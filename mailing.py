@@ -5,9 +5,19 @@ from email.MIMEMultipart import MIMEMultipart
 from email.MIMEText import MIMEText
 
 
-# Credentials (if needed)
-username = 'rdbrandt@colby.edu'
-password = 'zjiqpqbiuuygufeb'
+#modular data loading from dir files
+def loadData(credCSV, groupCSV, subjectCSV):
+	credDataObj = d.Data(credCSV)
+	credDataRow = credDataObj.get_row(0)
+	username = credDataRow[0]
+	password = credDataRow[1]
+	subjectDataObj = d.data(subjectCSV)
+	subjectDataRow = subjectDataObj.get_row(0)
+	subject = subjectDataRow[0]
+	groupDataObj = d.data(groupCSV)
+	return (username, password, subject, groupDataObj)
+
+
 
 def customMessage(name,school,messageFileName):
 	fp = open(messageFileName,'rU')
