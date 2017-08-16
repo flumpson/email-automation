@@ -46,5 +46,5 @@ def sendIntroMessage(fromEmail, password, subject, smtp, groupDataObj, messageFi
         body = customMessage(data[0], data[2], messageFileName)
         msg.attach(MIMEText(body, 'plain'))
         print msg.as_string()
-        server.sendmail(fromaddr, toaddrs, msg.as_string())
+        server.sendmail(fromEmail, data[1], msg.as_string())
     server.quit()
