@@ -1,0 +1,9 @@
+{
+	"credentials_path": "./csv/creds.csv",
+	"email_metadata_path": "./csv/group1.csv",
+	"subject": "TEST 123",
+	"smtp_server": "smtp.gmail.com",
+	"message_path": "./message/test.txt",
+	"to_replace_csv_path": "./csv/toReplace.csv",
+	"replace_with_csv_path": "./csv/replaceWith.csv"
+}
