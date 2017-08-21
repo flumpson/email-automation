@@ -25,7 +25,9 @@ def customMessage(patternArr, replaceArr, message):
     return message
 
 # sends the messages, crafting each one to target the individual
-# NOTE the groupDataObj has 3 columns [PERSON_NAME, EMAIL, COMPANY/INSTITUTION]
+# NOTE the groupDataObj has 3 columns [EMAIL, COMPANY/INSTITUTION]
+
+
 def sendIntroMessage(fromEmail, password, subject, smtp, groupDataObj, messageFileName, patternDataObj, replaceDataObj):
     server = smtplib.SMTP(smtp)
     server.starttls()
@@ -35,17 +37,15 @@ def sendIntroMessage(fromEmail, password, subject, smtp, groupDataObj, messageFi
     for x in range(groupDataObj.get_num_rows()):
         # grab a row
         groupData = groupDataObj.get_row(x)
-        # only take first name, lose the last
-        temp = groupData[0].split(" ")
-        groupData[0] = temp[0]
         # set the addresses and headers
         msg = MIMEMultipart()
         msg['From'] = fromEmail
-        msg['To'] = groupData[1]
-        msg['Subject'] = groupData[2] + " " + subject
+        msg['To'] = groupData[0]
+        msg['Subject'] = customMessage(patternDataObj.get_row(
+            0), replaceDataObj.get_row(x), subject)
         body = customMessage(patternDataObj.get_row(
             0), replaceDataObj.get_row(x), message)
         msg.attach(MIMEText(body, 'plain'))
         print msg.as_string()
-        server.sendmail(fromEmail, groupData[1], msg.as_string())
+        server.sendmail(fromEmail, groupData[0], msg.as_string())
     server.quit()

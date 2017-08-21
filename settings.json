@@ -1,8 +1,7 @@
-// Settings
 {
 	"credentials_path": "./csv/creds.csv",
 	"email_metadata_path": "./csv/group1.csv",
-	"subject": "Testing 123",
+	"subject": "TEST 123",
 	"smtp_server": "smtp.gmail.com",
 	"message_path": "./message/test.txt",
 	"to_replace_csv_path": "./csv/toReplace.csv",
