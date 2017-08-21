@@ -1,0 +1,9 @@
+{
+	"credentials_path": "",
+	"email_metadata_path": "",
+	"subject": "",
+	"smtp_server": "",
+	"message_path": "",
+	"to_replace_csv_path": "",
+	"replace_with_csv_path": ""
+}
